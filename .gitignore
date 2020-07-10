@@ -1,0 +1,36 @@
+# Venv
+/venv
+
+# Screenchots
+/screenshots
+
+# Reports
+/report/tests
+
+/.idea
+
+/__pycache__
+
+/geckodriver.log
+
+/tests/__pycache__
+
+/framework/pages/__pycache__
+
+/framework/base/__pycache__
+
+/framework/__pycache__
+
+/framework/*.pyc
+
+/framework/base/*.pyc
+
+/framework/dialogs/*.pyc
+
+/framework/pages/*.pyc
+
+/tests/*.pyc
+
+/framework/dialogs/__pycache__
+
+
