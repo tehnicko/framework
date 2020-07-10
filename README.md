@@ -211,3 +211,4 @@ For more commands run:
 This document will be expanded in need, if some major changes or additions happened to the framework. This is a basic guideline to work with the framework with assumption that developer has
 some previous skills in OOP, Python or other language and previous familiarity with the guides listed above.
 # framework
+# framework
