@@ -12,10 +12,15 @@ class TestExample01(BaseTestCase):
     def test_example_1(self):
         driver = self.driver
         search = ExamplePage(driver)
-        time.sleep(3)
-        search.enter_keyword_in_search_field("Python")
-        time.sleep(3)
 
+        # Check that the google page is displayed and the search field is visible
+        self.assertTrue(search.is_google_search_field_visible(),
+                        "Nor correct page is opened oor the search field is not visible")
+
+        # Enter keyword in the search field and hit enter
+        search.enter_keyword_in_search_field("Python")
+
+        # Check that the "Python" keyword is visible on the page
         assert "Python" in driver.page_source, "The 'Python' keyword is not visible on the page!"
 
     def tearDown(self):
