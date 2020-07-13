@@ -1,19 +1,22 @@
 #!/usr/bin/env python
 from framework.base.base_tc import BaseTestCase
-from framework.pages.login_page import LoginPage
+from framework.pages.example_page import ExamplePage
 import time
 
 
-class TestDummy01(BaseTestCase):
+class TestExample01(BaseTestCase):
 
     def setUp(self):
-        super(TestDummy01, self).setUp()
+        super(TestExample01, self).setUp()
 
-    def test_dummy1(self):
+    def test_example_1(self):
         driver = self.driver
-        login = LoginPage(driver)
-        login.enter_username("TestDummy01")
+        search = ExamplePage(driver)
+        time.sleep(3)
+        search.enter_keyword_in_search_field("Python")
         time.sleep(3)
 
+        assert "Python" in driver.page_source, "The 'Python' keyword is not visible on the page!"
+
     def tearDown(self):
-        super(TestDummy01, self).tearDown()
+        super(TestExample01, self).tearDown()
